@@ -17,15 +17,15 @@ We set up the data frame. Edit the data below to include information about your 
 
 ```{r setup-tibble}
 team_data <- tibble(
-  name = c("Peter Rabbit", "member 1", "member 2", 
-           "member 3", "member 4"),
-  github_username = c("mcgregors-garden", "username 1", "username 2", 
-                      "username 3", "username 4"), 
-  colour = c("powderblue", "colour 1", "colour 2", 
-             "colour 3", "colour 4"),
-  hobby = c("Hopping", "hobby 1", "hobby 2", 
-            "hobby 3", "hobby 4"),
-  favourite_number = c(2, NA, NA, NA, NA)
+  name = c("Kate", "Connor", "Ruth", 
+           "Kate", "Torgua", "Ellie"),
+  github_username = c("kateh-robinson", "cburnett-123", "r-u-th", 
+                      "katef26", "torgua", "elliesmith1406"), 
+  colour = c("green", "orange", "green", 
+             "pink", "green", "blue"),
+  hobby = c("singing", "guitar", "sewing", 
+            "badminton", "minecraft", "basketball"),
+  favourite_number = c(4, 6, 7, 6, 8, 6)
   )
 
 team_data
@@ -46,20 +46,19 @@ p1 <- ggplot(data = team_data,
 p1
 ```
 
-
-*Remove this text (including the stars), and add your answer for Exercise 18 here.*
+A bar chart with each bar as our git hub username, each bar of height favourite number, and each bar's colour is our favourite colour.
 
 ### Exercises 19
 
 Change the text of the plot title and axis labels.
 
 ```{r labelled-bar-plot}
-p1 + labs(x = "Insert text here", 
-          y = "Insert text here",
-          title = "Insert text here")
+p1 + labs(x = "Usernames", 
+          y = "Favourite number",
+          title = "IDS Team Info")
 ```
 
-*Remove this text (including the stars), and add your answer for Exercise 19 here.*
+labs() labels the x and y axes and gives the bar plot a title.
 
 ### Exercise 20
 
@@ -69,4 +68,4 @@ p2 <- ggplot(team_data, aes(x = hobby)) +
 p2
 ```
 
-*Remove this text (including the stars) and add your answer for Exercise 20 here.*
+Could use a word cloud or only look at the most popular hobbies.
